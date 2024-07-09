@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_treat_uint.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kaz <kaz@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 19:46:22 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/15 15:10:54 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2024/07/09 23:33:04 by kaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_printf.h"
+#include "ft_printf.h"
 
 static int	ft_put_nbr_cu(unsigned int n)
 {

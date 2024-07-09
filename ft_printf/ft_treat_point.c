@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_treat_point.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kaz <kaz@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 15:57:08 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/14 19:40:41 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2024/07/09 23:32:11 by kaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_treat_point(unsigned long long point)
 {

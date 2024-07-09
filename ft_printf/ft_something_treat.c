@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_something_treat.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kaz <kaz@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 14:27:14 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/15 14:59:20 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2024/07/09 23:32:55 by kaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_something_treat(int c, va_list arg)
 {

@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kaz <kaz@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 15:19:47 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/15 14:59:41 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2024/07/09 23:32:46 by kaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include"libft/libft.h"
-# include<stdarg.h>
+# include "libft/libft.h"
+# include <stdarg.h>
 
 char	*ft_alltolower(char *c);
 char	*ft_base_point(unsigned long long p, int b);

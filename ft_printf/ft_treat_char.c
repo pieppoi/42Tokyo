@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_treat_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kaz <kaz@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 15:48:12 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/14 15:49:51 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2024/07/09 23:32:57 by kaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_treat_char(char c)
 {

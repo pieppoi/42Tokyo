@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_base_point_c.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: kaz <kaz@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 19:18:53 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/15 17:34:39 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2024/07/09 23:32:43 by kaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_printf.h"
+#include "ft_printf.h"
 
 static	char	*ft_base_change(unsigned long long u, int b, char *r, int c)
 {
