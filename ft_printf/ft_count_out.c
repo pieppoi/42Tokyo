@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treat_uint.c                                    :+:      :+:    :+:   */
+/*   ft_count_out.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/14 19:46:22 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/07/12 13:17:06 by mkazuhik         ###   ########.fr       */
+/*   Created: 2024/07/12 13:16:24 by mkazuhik          #+#    #+#             */
+/*   Updated: 2024/07/12 13:26:19 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_put_nbr_cu(unsigned int n)
+int	ft_count_out(const char *save, va_list arg)
 {
-	char			str;
-	unsigned int	tmp;
-	size_t			t;
+	size_t	i;
+	size_t	c;
 
-	tmp = n;
-	t = 0;
-	while (9 < tmp)
+	i = 0;
+	c = 0;
+	while (save[i])
 	{
-		tmp = tmp / 10;
-		t++;
+		if (save[i] == '%')
+		{
+			i++;
+			c += ft_something_treat(save[i], arg);
+		}
+		else
+		{
+			ft_putchar_fd(save[i], 1);
+			c++;
+		}
+		i++;
+		if (!save[i])
+			return (c);
 	}
-	if (9 < n)
-		ft_put_nbr_cu(n / 10);
-	str = '0' + n % 10;
-	write(1, &str, 1);
-	return (t + 1);
-}
-
-int	ft_treat_uint(unsigned long long uint)
-{
-	int	n;
-
-	n = 0;
-	n = ft_put_nbr_cu((unsigned int)uint);
-	return (n);
+	return (c);
 }
