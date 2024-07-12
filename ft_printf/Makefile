@@ -6,7 +6,7 @@
 #    By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/13 15:10:10 by mkazuhik          #+#    #+#              #
-#    Updated: 2024/05/15 13:55:21 by mkazuhik         ###   ########.fr        #
+#    Updated: 2024/07/12 13:30:04 by mkazuhik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ CFLAGS = -Wall -Wextra -Werror
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${INCS}
 
 ${NAME}: ${OBJS}
-	${MAKE} bonus -C ./libft
+	${MAKE} -C ./libft
 	cp libft/libft.a ${NAME}
 	${LIBC} ${NAME} ${OBJS}
 	${LIBR} ${NAME}

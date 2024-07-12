@@ -6,7 +6,7 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:28:54 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/07/12 13:26:57 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2024/07/12 16:19:09 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ char	*next_line(int fd, char *save)
 
 	tmp = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!tmp)
+	{
+		free(save);
 		return (NULL);
+	}
 	readlen = 1;
 	while (!ft_strchr(save, '\n') && readlen != 0)
 	{
