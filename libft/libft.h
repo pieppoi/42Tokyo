@@ -6,7 +6,7 @@
 /*   By: kaz <kaz@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 11:32:01 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/07/09 23:39:16 by kaz              ###   ########.fr       */
+/*   Updated: 2024/07/30 15:05:24 by kaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <errno.h>
+# include <stdint.h>
 
 //part1
 int		ft_atoi(const char *str);

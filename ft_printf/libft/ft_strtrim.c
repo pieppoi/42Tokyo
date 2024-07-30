@@ -6,7 +6,7 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:18:15 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/07/12 13:19:08 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2024/07/30 15:23:58 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,9 @@ int	right_count(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
-	int	count;
 
 	i = 0;
 	j = 0;
-	count = 0;
 	while (s1[i] != '\0')
 		i++;
 	i = i - 1;
