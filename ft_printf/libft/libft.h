@@ -6,7 +6,7 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 11:32:01 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/07/30 15:24:04 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2024/08/14 17:28:42 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <limits.h>
 # include <errno.h>
 # include <stdint.h>
-
 
 //part1
 int		ft_atoi(const char *str);
