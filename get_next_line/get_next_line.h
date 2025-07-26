@@ -6,15 +6,12 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:23:46 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/08/14 16:36:23 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/26 17:30:51 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-
-# define FD_MAX 256
-# define BUF_MAX INT_MAX
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1024
