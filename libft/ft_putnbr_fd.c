@@ -6,11 +6,11 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 13:04:42 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/07 16:28:19 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/29 11:34:37 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

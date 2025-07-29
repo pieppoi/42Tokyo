@@ -6,12 +6,12 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:59:02 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/15 17:23:50 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/29 11:35:07 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
+#include <stdio.h>
 
 char	*ft_strdup(const char *s)
 {

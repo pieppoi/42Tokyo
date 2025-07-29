@@ -6,11 +6,11 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 14:40:08 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/08 14:45:16 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/29 11:34:26 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {
