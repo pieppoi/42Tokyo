@@ -6,11 +6,11 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:55:29 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/10 16:37:26 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/29 11:34:41 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 static char	**all_free(char **b, int i)
 {

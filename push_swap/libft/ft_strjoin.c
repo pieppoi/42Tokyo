@@ -6,11 +6,11 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:24:55 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/09 19:14:58 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/29 11:35:16 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,7 +6,7 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:12:55 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/07 16:04:07 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/29 11:35:00 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 		{
 			return (t + i);
 		}
-			i++;
+		i++;
 	}
 	if (s[i] == (char)c)
 		return (t + i);

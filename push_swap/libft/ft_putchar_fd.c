@@ -6,11 +6,11 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 12:34:01 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/05/07 12:39:36 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/29 11:34:33 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

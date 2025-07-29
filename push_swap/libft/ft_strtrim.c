@@ -6,11 +6,11 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:18:15 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/09/12 16:46:12 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/29 11:35:30 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	left_count(char const *s1, char const *set)
 {
