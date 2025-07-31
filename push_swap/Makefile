@@ -1,11 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/07/30 20:23:43 by mkazuhik          #+#    #+#              #
+#    Updated: 2025/07/31 22:49:03 by mkazuhik         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = push_swap
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I.
 LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
-SRCS = push_swap.c stack_ops.c operations.c rotate_a.c rotate_b.c rotate_both.c utils.c sorting.c
+SRCS =	$(wildcard srcs/*.c)\
+		$(wildcard srcs/**/*.c)
+
 OBJS = $(SRCS:.c=.o)
 
 all: $(LIBFT) $(NAME)

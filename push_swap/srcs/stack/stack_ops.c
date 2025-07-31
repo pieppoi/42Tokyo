@@ -6,50 +6,51 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 10:00:00 by mkazuhik          #+#    #+#             */
-/*   Updated: 2024/12/19 10:00:00 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/31 23:19:35 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*create_stack(void)
+static void	update_min_max(t_stack *stack, int value)
 {
-	t_stack	*stack;
+	if (value > stack->max)
+		stack->max = value;
+	if (value < stack->min)
+		stack->min = value;
+}
 
-	stack = malloc(sizeof(t_stack));
-	if (!stack)
-		return (NULL);
-	stack->top = NULL;
-	stack->size = 0;
-	return (stack);
+static void	insert_node_empty_stack(t_stack *stack, t_node *new_node)
+{
+	new_node->next = new_node;
+	new_node->prev = new_node;
+	stack->head = new_node;
+}
+
+static void	insert_node_non_empty_stack(t_stack *stack, t_node *new_node)
+{
+	new_node->next = stack->head;
+	new_node->prev = stack->head->prev;
+	stack->head->prev->next = new_node;
+	stack->head->prev = new_node;
+	stack->head = new_node;
 }
 
 void	push(t_stack *stack, int value)
 {
 	t_node	*new_node;
 
-	new_node = malloc(sizeof(t_node));
+	if (!stack)
+		return ;
+	new_node = create_node(value);
 	if (!new_node)
 		return ;
-	new_node->value = value;
-	new_node->next = stack->top;
-	stack->top = new_node;
+	if (stack->head == NULL)
+		insert_node_empty_stack(stack, new_node);
+	else
+		insert_node_non_empty_stack(stack, new_node);
 	stack->size++;
-}
-
-int	pop(t_stack *stack)
-{
-	t_node	*temp;
-	int		value;
-
-	if (is_empty(stack))
-		return (0);
-	temp = stack->top;
-	value = temp->value;
-	stack->top = stack->top->next;
-	free(temp);
-	stack->size--;
-	return (value);
+	update_min_max(stack, value);
 }
 
 void	clear_stack(t_stack *stack)
@@ -59,24 +60,16 @@ void	clear_stack(t_stack *stack)
 
 	if (!stack)
 		return ;
-	current = stack->top;
-	while (current)
+	current = stack->head;
+	while (current && stack->size > 0)
 	{
 		next = current->next;
 		free(current);
 		current = next;
+		stack->size--;
+		if (current == stack->head)
+			break ;
 	}
+	stack->head = NULL;
 	free(stack);
 }
-
-int	is_empty(t_stack *stack)
-{
-	return (stack->top == NULL);
-}
-
-int	peek(t_stack *stack)
-{
-	if (is_empty(stack))
-		return (0);
-	return (stack->top->value);
-} 

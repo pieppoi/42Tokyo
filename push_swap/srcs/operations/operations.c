@@ -1,52 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_a.c                                         :+:      :+:    :+:   */
+/*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 10:00:00 by mkazuhik          #+#    #+#             */
-/*   Updated: 2025/07/29 10:49:54 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/31 22:52:58 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_stack *stack_a)
+static void	swap_stack(t_stack *stack)
 {
 	t_node	*first;
-	t_node	*last;
+	t_node	*second;
+	int		temp;
 
-	if (stack_a->size < 2)
+	if (!stack || !stack->head || stack->size < 2)
 		return ;
-	first = stack_a->top;
-	last = stack_a->top;
-	while (last->next)
-		last = last->next;
-	stack_a->top = first->next;
-	first->next = NULL;
-	last->next = first;
-	ft_putstr_fd("ra\n", 1);
-	g_operations++;
+	first = stack->head;
+	second = first->next;
+	if (first == second)
+		return ;
+	temp = first->value;
+	first->value = second->value;
+	second->value = temp;
 }
 
-void	rra(t_stack *stack_a)
+void	sa(t_stacks *stacks)
 {
-	t_node	*last;
-	t_node	*second_last;
-
-	if (stack_a->size < 2)
+	if (!stacks || !stacks->stack_a)
 		return ;
-	last = stack_a->top;
-	second_last = NULL;
-	while (last->next)
-	{
-		second_last = last;
-		last = last->next;
-	}
-	second_last->next = NULL;
-	last->next = stack_a->top;
-	stack_a->top = last;
-	ft_putstr_fd("rra\n", 1);
-	g_operations++;
-} 
+	swap_stack(stacks->stack_a);
+	ft_putstr_fd("sa\n", 1);
+}
+
+void	sb(t_stacks *stacks)
+{
+	if (!stacks || !stacks->stack_b)
+		return ;
+	swap_stack(stacks->stack_b);
+	ft_putstr_fd("sb\n", 1);
+}
+
+void	ss(t_stacks *stacks)
+{
+	swap_stack(stacks->stack_a);
+	swap_stack(stacks->stack_b);
+	ft_putstr_fd("ss\n", 1);
+}

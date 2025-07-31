@@ -6,13 +6,11 @@
 /*   By: mkazuhik <mkazuhik@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 10:00:00 by mkazuhik          #+#    #+#             */
-/*   Updated: 2025/07/29 10:50:38 by mkazuhik         ###   ########.fr       */
+/*   Updated: 2025/07/31 23:23:16 by mkazuhik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	g_operations = 0;
 
 static void	init_stack(t_stack *stack_a, int argc, char **argv)
 {
@@ -32,48 +30,49 @@ static void	handle_error(void)
 	exit(1);
 }
 
-static void	cleanup_stacks(t_stack *stack_a, t_stack *stack_b)
+static void	cleanup_stacks(t_stacks *stacks)
 {
-	clear_stack(stack_a);
-	clear_stack(stack_b);
+	if (stacks)
+	{
+		if (stacks->stack_a)
+			clear_stack(stacks->stack_a);
+		if (stacks->stack_b)
+			clear_stack(stacks->stack_b);
+		free(stacks);
+	}
 }
 
-static void	process_stack(t_stack *stack_a, t_stack *stack_b)
+static void	init_and_validate(t_stacks *stacks, int argc, char **argv)
 {
-	init_stack(stack_a, stack_a->size + 1, NULL);
-	if (check_duplicates(stack_a))
+	init_stack(stacks->stack_a, argc, argv);
+	if (check_duplicates(stacks->stack_a))
 	{
-		cleanup_stacks(stack_a, stack_b);
+		cleanup_stacks(stacks);
 		handle_error();
 	}
-	if (!is_sorted(stack_a))
-		sort_stack(stack_a, stack_b);
 }
 
 int	main(int argc, char **argv)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	t_stacks	*stacks;
 
 	if (argc < 2)
 		return (0);
 	if (!validate_input(argc, argv))
 		handle_error();
-	stack_a = create_stack();
-	stack_b = create_stack();
-	if (!stack_a || !stack_b)
+	stacks = (t_stacks *)malloc(sizeof(t_stacks));
+	if (!stacks)
+		handle_error();
+	stacks->stack_a = create_stack();
+	stacks->stack_b = create_stack();
+	if (!stacks->stack_a || !stacks->stack_b)
 	{
-		cleanup_stacks(stack_a, stack_b);
+		cleanup_stacks(stacks);
 		handle_error();
 	}
-	init_stack(stack_a, argc, argv);
-	if (check_duplicates(stack_a))
-	{
-		cleanup_stacks(stack_a, stack_b);
-		handle_error();
-	}
-	if (!is_sorted(stack_a))
-		sort_stack(stack_a, stack_b);
-	cleanup_stacks(stack_a, stack_b);
+	init_and_validate(stacks, argc, argv);
+	if (!is_sorted(stacks->stack_a))
+		sort_stack(stacks);
+	cleanup_stacks(stacks);
 	return (0);
 }
